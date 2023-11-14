@@ -1,0 +1,353 @@
+:root {
+    --color-principal: 
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+p {
+    font-size: 23px;
+}
+h2 {
+    font-size: 35px;
+}
+h3 {
+    font-size: 27px;
+}
+.tema-oscuro {
+    background-color: #000;
+}
+.tema-oscuro-letra{
+    color: #ffa500;
+}
+.tema-oscuro-capsula {
+    border: 1px solid #ffa500;
+}
+
+
+.todo {
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas: "header header" "aside main";
+}
+header {
+    grid-area: header;
+    background-color: #ffa500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+
+
+
+
+aside {
+    grid-area: aside;
+    background-color: #4b4949;
+}
+.menu {
+    position: sticky;
+    top: 70px;
+    
+}
+.menu a {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 19px;
+    transition: all .7s ease;
+}
+.menu a:hover {
+    color: #000000;
+    background-color: #ffa500;
+    font-weight: 900;
+} 
+.menu .aa {
+    color: #000000;
+    background-color: #ffa500;
+    font-weight: 900;
+}
+
+main {
+    grid-area: main;
+}
+.section {
+    min-height: 100vh;
+    padding: 70px 30px 0px 30px;
+}
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* Diseño metodologico */
+
+.cont-diseno h3 {
+    margin-bottom: 20px;
+}
+.cont-diseno p  {
+    margin-bottom: 40px;
+}
+.cont-todo-fases {
+    box-shadow: 0px 4px 10px 1px #000;
+    border-radius: 10px;
+    display: flex;
+    height: 160px;
+    width: 83%;
+    margin: 0px auto;
+    margin-bottom: 40px;
+}
+
+.nav-fases {
+    width: 30%;
+}
+.nav-fases a {
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+.nav-fases a:nth-child(1){
+    border-top-left-radius: 10px;
+}
+.nav-fases a:nth-child(5){
+    border-bottom-left-radius: 10px;
+}
+.nav-fases a:hover {
+    background-color: #ffa500;
+    font-weight: bold;
+}
+.nav-fases .a {
+    background-color: #ffa500;
+    font-weight: bold;
+} 
+/* {{{{{{{{{ */
+.nav-fases .tema-oscuro-letra {
+    color: #fff;
+}
+
+.cont-fases {
+    padding: 13px;
+    position: relative;
+    width: 70%;
+
+}
+.fases {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    list-style: none;
+}
+.fases.ver {
+    visibility: visible;
+    opacity: 1;
+}
+.cronograma {
+    width: 100%;
+}
+.cronograma img {
+    width: 100%;
+}
+
+/* fase de analisis */
+
+.cont-requisitos-funcionales {
+    margin-bottom: 40px;
+}
+.cont-requisitos-funcionales ul, .cont-requisitos-no-funcionales ul {
+    padding-left: 25px;
+    margin-top: 20px;
+}
+.cont-requisitos-funcionales li, .cont-requisitos-no-funcionales li {
+    font-size: 23px;
+}
+
+
+/* Fase de diseño */
+
+.slider-general {
+    margin-top: 30px;
+    width: 100%;
+    height: 470px;
+    position: relative;
+}
+.slider-hijo {
+    width: 100%;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.slider-hijo.is-visible{
+    visibility: visible;
+    opacity: 1;
+}
+.slider-hijo img {
+    width: 100%;
+}
+.slider-btns {
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.slider-btns a {
+    background-color: #ffa500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+}
+.slider-btns a:hover {
+    background-color:#ffc75e ;
+}
+
+.cont-diagrama-er{
+    margin-top: 45px;
+}
+.diagrama-er{
+    margin-top: 40px;
+}
+.diagrama-er img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* fase de programacion */
+
+.herramientas {
+    padding-left: 40px;
+    margin-top: 20px;
+}
+.herramientas li {
+    font-size: 23px;
+}
+.cont-arquitectura-plataforma{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.cont-arquitectura-plataforma h3 {
+    margin-bottom: 20px;
+}
+.cont-arquitectura-plataforma ul {
+    margin-top: 20px;
+    padding-left: 40px;
+}
+.cont-arquitectura-plataforma li {
+    font-size: 23px;
+}
+.inyeccion-sql,  .hash-contrasena, .migraciones, .mvc, .solicitud-http{
+    box-shadow: 0px 4px 10px 1px #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 95%;
+    margin: 0px auto;
+    margin-bottom: 40px;
+}
+.inyeccion-sql h3 {
+    margin-bottom: 20px;
+}
+.inyeccion-sql ul {
+    padding-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.inyeccion-sql li {
+    font-size: 23px;
+}
+.img-inyeccion{
+    width: 70%;
+    margin: 0px auto;
+}
+.img-inyeccion img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hash-contrasena h3 {
+    margin-bottom: 20px;
+}
+.hash-contrasena p{
+    margin-bottom: 20px;
+}
+.img-hash {
+    width: 70%;
+    margin: 0px auto;
+}
+.img-hash img {
+    width: 100%;
+}
+
+.migraciones p, .mvc p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.migraciones ul {
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+.migraciones li {
+    font-size: 23px;
+}
+.img-migraciones, .img-mvc {
+    width: 70%;
+    margin: 0px auto;
+}
+.img-migraciones img , .img-mvc img{
+    width: 100%;
+}
+.img-mvc {
+    margin-bottom: 30px;
+}
+
+
+/* botones de la pagina */
+
+.btn-scroll, .btn-dark {
+    z-index: 200
+    ;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    background-color: #ffa500;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    font-size: 30px;
+    bottom: 1vh;
+    transition: all 1s ease;
+}
+.btn-dark {
+    left: 1vw;
+}
+.btn-scroll {
+    right: 1vw;
+}
