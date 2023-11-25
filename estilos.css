@@ -51,8 +51,19 @@ header {
     top: 0;
     z-index: 40;
 }
-
-
+.header-btn {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% -1.5rem);
+    left: 10px;
+    display: none;
+}
+.panel.is-active {
+    transform: translateY(711px);
+}
 
 
 
@@ -111,7 +122,7 @@ main {
     box-shadow: 0px 4px 10px 1px #000;
     border-radius: 10px;
     display: flex;
-    height: 160px;
+    height: auto;
     width: 83%;
     margin: 0px auto;
     margin-bottom: 40px;
@@ -350,4 +361,37 @@ main {
 }
 .btn-scroll {
     right: 1vw;
+}
+
+@media screen and (max-width: 1087px) {
+    .todo {
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        height: 70px;
+    }
+    .panel {
+        position: fixed;
+        top:-640px;
+        width: 100vw; 
+        z-index: 30;
+        background-color: #4b4949bb;
+        transition: transform .5s ease;
+    }
+    .menu {
+        top: -366px;
+    }
+    .header-btn {
+        display: block;
+    }
+    .cont-todo-fases {
+        height: 450px;
+        width: 100%;
+    }
+    .nav-fases a {
+        margin-bottom: 10px;
+        padding-left: 4px;
+        height: 45px;
+    }
 }
